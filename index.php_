@@ -1,0 +1,19 @@
+<?php
+return;
+
+phpinfo();
+return;
+
+/* Connect to an ODBC database using driver invocation */
+$dsn = 'mysql:dbname=gcsappdb;host=localhost';
+$user = 'root';
+$password = 'ono777';
+
+try {
+    $dbh = new PDO($dsn, $user, $password);
+    var_dump($dbh);
+} catch (PDOException $e) {
+    echo 'Connection failed: ' . $e->getMessage();
+}
+
+?>
